@@ -1,0 +1,106 @@
+/* Importa as fontes usadas nos títulos e textos. */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Remove espaçamentos padrão e facilita o cálculo das dimensões. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define as cores e a altura mínima da página. */
+body {
+    min-height: 100vh;
+    background-color: #000000;
+    color: #F6F6F6;
+}
+
+/* Aplica a cor de destaque ao trecho principal do título. */
+.titulo-destaque {
+    color: #22D4FD;
+}
+
+/* Organiza o texto e a imagem lado a lado com Flexbox. */
+.apresentacao {
+    margin: 10% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Organiza os elementos textuais em uma coluna. */
+.apresentacao__conteudo {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Define a tipografia do título. */
+.apresentacao__conteudo__titulo {
+    font-size: 33px;
+    font-family: 'Krona One', sans-serif;
+}
+
+/* Define a tipografia do parágrafo. */
+.apresentacao__conteudo__texto {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Distribui os botões das redes sociais. */
+.apresentacao__conteudo__links {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Estiliza os links para que funcionem como botões. */
+.apresentacao__links__link {
+    width: 280px;
+    padding: 21.5px 0;
+    border-radius: 16px;
+    background-color: #22D4FD;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Cria uma resposta visual quando o usuário passa o mouse. */
+.apresentacao__links__link:hover {
+    background-color: #8BE9FD;
+}
+
+/* Evita que a imagem ultrapasse o espaço disponível. */
+.apresentacao__imagem {
+    max-width: 45%;
+    height: auto;
+}
+
+/* Reorganiza o conteúdo em telas menores. */
+@media (max-width: 900px) {
+    .apresentacao {
+        margin: 8%;
+        flex-direction: column-reverse;
+    }
+
+    .apresentacao__conteudo {
+        width: 100%;
+    }
+
+    .apresentacao__conteudo__links {
+        flex-direction: column;
+    }
+
+    .apresentacao__links__link {
+        width: 100%;
+    }
+
+    .apresentacao__imagem {
+        max-width: 80%;
+    }
+}
